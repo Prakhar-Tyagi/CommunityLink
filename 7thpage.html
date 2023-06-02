@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .profile {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: beige;
+            width: 100%;
+            margin: 0px;
+        }
+        
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            padding-left: 30%;
+            font-size: larger;
+        }
+        
+        .profile-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .profile-details {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 400px;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .accepted {
+            color: green;
+        }
+        
+        .pending {
+            color: orange;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        .add-event-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .delete-event-button {
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img class="profile-image" src="https://th-thumbnailer.cdn-si-edu.com/n6dVw8OfHNbivYCGuSEmlICCXfQ=/fit-in/1072x0/filters:focal(485x474:486x475)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/7d/fa/7dfa0d37-961b-4376-b29b-86b04dbf0e60/this-image-shows-a-reconstruction-of-dragon-man-in-his-habitat-credit-chuang_zhao_web.jpg" alt="Profile Picture">
+        <div class="profile-info">
+            <div class="profile-name"><h2>John Doe</h2></div>
+            <div class="profile-details">
+                <h2>
+                    <div>Address: 123 Main St, City</div>
+                    <div>Age: 30</div>
+                    <div>Contact Number: +1 123 456 7890</div>
+                    <div>Email: johndoe@example.com</div>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Event</th>
+                <th>Location</th>
+                <th>Timing</th>
+                <th>Duration</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Event 1</td>
+                <td>Location 1</td>
+                <td>10:00 AM - 12:00 PM</td>
+                <td>2 hours</td>
+                <td>Description 1</td>
+            </tr>
+            <tr>
+                <td>Event 2</td>
+                <td>Location 2</td>
+                <td>2:00 PM - 4:00 PM</td>
+                <td>2 hours</td>
+                <td>Description 2</td>
+            </tr>
+            <tr>
+                <td>Event 3</td>
+                <td>Location 3</td>
+                <td>6:00 PM - 8:00 PM</td>
+                <td>2 hours</td>
+                <td>Description 3</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <center>
+        <button class="add-event-button">Add Event</button>
+        <button class="delete-event-button">Delete Event</button>
+</center>
+</body>
+</html>
