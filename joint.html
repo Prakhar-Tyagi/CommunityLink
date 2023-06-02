@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Event Page</title>
+    <style>
+    /* Styles for the top bar */
+    .top-bar {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .left-options {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+    
+    .left-options a {
+        color: #fff;
+        margin-right: 20px;
+        text-decoration: none;
+    }
+    
+    .right-options {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    
+    .right-options a {
+        color: #fff;
+        margin-right: 20px;
+        text-decoration: none;
+    }
+    
+    /* Styles for the body */
+    body {
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    /* Styles for the welcome message */
+    .welcome-message {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    /* Styles for the search box */
+    .search-box {
+        margin-bottom: 20px;
+    }
+    
+    /* Styles for the Event list container */
+    .Event-list-container {
+        width: 400px;
+        height: 200px;
+        overflow: auto;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    
+    /* Styles for the Event list */
+    .Event-list {
+        margin-top: 0;
+        text-align: left;
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .Event-list li {
+        margin-bottom: 10px;
+    }
+    
+    /* Styles for the initiate Event button */
+    .initiate-Event-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    /* Styles for the connect pop-up */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .popup {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 500px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .popup h2 {
+        margin-top: 0;
+    }
+    
+    .popup p {
+        margin-bottom: 10px;
+    }
+    
+    /* Styles for the connect button */
+    .connect-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+
+</head>
+<body>
+    <div class="top-bar">
+        <div class="left-options">
+            <a href="#">Initiate a Event</a>
+        </div>
+        <div class="right-options">
+            <a href="#">Volunteer Profile</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1 class="welcome-message">Welcome, we will help you find your interest</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="Event-list-container">
+            <ul class="Event-list">
+                <li><a href="#" class="Event-link">Event 1</a></li>
+                <li><a href="#" class="Event-link">Event 2</a></li>
+                <li><a href="#" class="Event-link">Event 3</a></li>
+                <li><a href="#" class="Event-link">Event 4</a></li>
+                <li><a href="#" class="Event-link">Event 5</a></li>
+                <li><a href="#" class="Event-link">Event 6</a></li>
+                <li><a href="#" class="Event-link">Event 7</a></li>
+                <li><a href="#" class="Event-link">Event 8</a></li>
+                <li><a href="#" class="Event-link">Event 9</a></li>
+                <li><a href="#" class="Event-link">Event 10</a></li>
+                <li><a href="#" class="Event-link">Event 11</a></li>
+                <li><a href="#" class="Event-link">Event 12</a></li>
+                <li><a href="#" class="Event-link">Event 13</a></li>
+                <li><a href="#" class="Event-link">Event 14</a></li>
+                <li><a href="#" class="Event-link">Event 15</a></li>
+                <li><a href="#" class="Event-link">Event 16</a></li>
+                <li><a href="#" class="Event-link">Event 17</a></li>
+                <li><a href="#" class="Event-link">Event 18</a></li>
+                <li><a href="#" class="Event-link">Event 19</a></li>
+                <li><a href="#" class="Event-link">Event 20</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Pop-up overlay -->
+    <div class="overlay">
+        <div class="popup">
+            <h2>Event Details</h2>
+            <p>Description: Social Animal Welfare.</p>
+            <p>Details: 3rd June, 10am at so and so place. Looking for 30 volunteers.</p>
+            <button class="connect-button">Connect</button>
+        </div>
+    </div>
+    
+    <script>
+        // Get the Event links
+        const EventLinks = document.querySelectorAll('.Event-link');
+        
+        // Get the overlay and popup elements
+        const overlay = document.querySelector('.overlay');
+        const popup = document.querySelector('.popup');
+        
+        // Function to show the popup
+        function showPopup() {
+            overlay.style.display = 'flex';
+        }
+        
+        // Function to hide the popup
+        function hidePopup() {
+            overlay.style.display = 'none';
+        }
+        
+        // Attach click event listeners to each Event link
+        EventLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                showPopup();
+            });
+        });
+        
+        // Attach click event listener to the overlay
+        overlay.addEventListener('click', (event) => {
+            if (event.target === overlay) {
+                hidePopup();
+            }
+        });
+	// Get the connect button
+        const connectButton = document.querySelector('.connect-button');
+        
+        // Attach click event listener to the connect button
+        connectButton.addEventListener('click', () => {
+            // Handle the click event for the connect button
+            connectButton.textContent = 'Request to connect sent';
+            connectButton.disabled = true;
+        });
+    </script>
+</body>
+</html>
