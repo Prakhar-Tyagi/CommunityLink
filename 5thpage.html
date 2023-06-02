@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .profile {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: beige;
+            width: 100%;
+            margin: 0px;
+        }
+        
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            padding-left: 30%;
+            font-size: larger;
+        }
+        
+        .profile-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .profile-details {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 400px;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .accepted {
+            color: green;
+        }
+        
+        .pending {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img class="profile-image" src="profile-picture.jpg" alt="Profile Picture">
+        <div class="profile-info">
+            <div class="profile-name"><h2>John Doe</h2></div>
+            <div class="profile-details">
+                <h2>
+                    <div>Address: 123 Main St, City</div>
+                    <div>Age: 30</div>
+                    <div>Contact Number: +1 123 456 7890</div>
+                    <div>Email: johndoe@example.com</div>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="Events">
+        <table style="width: 100%;">
+            <tr>
+                <th>Event</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Event 1</td>
+                <td class="accepted">Accepted</td>
+            </tr>
+            <tr>
+                <td>Event 2</td>
+                <td class="pending">Pending</td>
+            </tr>
+            <tr>
+                <td>Event 3</td>
+                <td class="accepted">Accepted</td>
+            </tr>
+            <tr>
+                <td>Event 4</td>
+                <td class="pending">Pending</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
